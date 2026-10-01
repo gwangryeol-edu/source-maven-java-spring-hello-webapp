@@ -42,8 +42,8 @@ pipeline {
       agent { label 'controller' }
       steps {
         withDockerRegistry(credentialsId: 'docker-registry-credential', url: 'https://index.docker.io/v1/') {
-          sh 'docker image push my-tomcat kwakgwangryeol/my-tomcat:v1' 
-          sh 'docker image push my-tomcat kwakgwangryeol/my-tomcat:latest' 
+          sh 'docker image push kwakgwangryeol/my-tomcat:v1' 
+          sh 'docker image push kwakgwangryeol/my-tomcat:latest' 
         }
       }
     }
